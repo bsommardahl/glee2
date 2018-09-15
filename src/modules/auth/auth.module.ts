@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { JwtModule } from '@nestjs/jwt';
-import { AuthService } from './auth.service';
 import { JwtStrategy } from './jwt.strategy';
 import { PassportModule } from '@nestjs/passport';
 import * as dotenv from 'dotenv';
@@ -16,6 +15,6 @@ dotenv.config();
             },
         }),
     ],
-    providers: [AuthService, JwtStrategy],
+    providers: [JwtStrategy],
 })
 export class AuthModule { }

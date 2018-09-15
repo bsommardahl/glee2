@@ -1,9 +1,12 @@
 import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
+import { JwtAuthGuard } from './modules/auth/jwt-auth.guard';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.setGlobalPrefix(process.env.API_VERSION || 'v1');
+  app.useGlobalGuards(new JwtAuthGuard());
   const options = new DocumentBuilder()
     .setTitle('Glee2 Boilerplate')
     .setDescription('The API description')
