@@ -77,3 +77,9 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
   Nest is [MIT licensed](LICENSE).
+
+## Status/Healthcheck Endpoint
+
+This API comes with a simple endpoint that provides it's status. If the API is not working, neither will the endpoint. This can be useful for load balancers and other applications that periodically check on the availability of a service.
+
+`GET /status` => `{ status: "ok" }`
