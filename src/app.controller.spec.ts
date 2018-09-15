@@ -16,7 +16,7 @@ describe('AppController', () => {
   describe('root', () => {
     it('should return "Hello World!"', () => {
       const appController = app.get<AppController>(AppController);
-      expect(appController.root({ name: "test" })).toBe('Hello test!');
+      expect(appController.root({ user: { name: "test" } })).toBe('Hello test!');
     });
   });
 });
