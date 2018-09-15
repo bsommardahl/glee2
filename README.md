@@ -77,3 +77,19 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
   Nest is [MIT licensed](LICENSE).
+
+## Endpoint Versioning
+
+By default, all endpoints are prefixed with a version number. This prepares us to be able to easily add more versions when it makes sense. For example:
+
+`/v1/users`
+
+## Authentication
+
+This API is equipped with JWT authentication. To be able to use endpoints, you need to generate a JWT with the same secret as what is configured in the API server. To configure the secret, add the following to your system environment (or `.env` file):
+
+```
+JWT_SECRET=some/long/string!
+```
+
+NOTE: If you don't configure a secret in your environment, the default will be used ('secretKey').
