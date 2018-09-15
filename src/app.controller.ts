@@ -1,4 +1,4 @@
-import { Get, Controller, UseGuards, Req } from '@nestjs/common';
+import { Req, Get, Controller } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
