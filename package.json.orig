@@ -22,12 +22,15 @@
   "dependencies": {
     "@nestjs/common": "^5.1.0",
     "@nestjs/core": "^5.1.0",
+<<<<<<< 7d09042d1b4be6b8284fa5260265c564381105b2
     "@nestjs/swagger": "^2.5.1",
+=======
     "@nestjs/jwt": "^0.1.3",
     "@nestjs/passport": "^5.1.0",
     "dotenv": "^6.0.0",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
+>>>>>>> JWT working with example guard.
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.2.2",
     "typescript": "^3.0.1"
