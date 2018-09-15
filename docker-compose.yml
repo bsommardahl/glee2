@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  server:
+    build:
+      context: "."
+      args:
+        JWT_SECRET: "secretKey"
+        SERVER_PORT: "3000"
