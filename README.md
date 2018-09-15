@@ -86,4 +86,12 @@ This API comes with a simple endpoint that provides it's status. If the API is n
 
 ## Logging
 
-We are using Loggly
+We are using Loggly with Winston to track log messages remotely. If you want to send your logs to Loggly for some reason, you should configure the following variables in your environment (either with `.env` or in your operating system):
+
+```
+LOGGLY_SUBDOMAIN=yoursubdomain
+LOGGLY_TOKEN=yourlogglytoken
+LOGGLY_LEVEL=info
+```
+
+You can obtain a free account from Loggly to test.
