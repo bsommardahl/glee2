@@ -4,7 +4,7 @@ import { AppModule } from './app.module';
 import { JwtAuthGuard } from './modules/auth/jwt-auth.guard';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { logger: new AppLogger() });
   const apiVersionPrefix:string = process.env.API_VERSION || 'v1';
   app.setGlobalPrefix(apiVersionPrefix);
   const options = new DocumentBuilder()

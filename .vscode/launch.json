@@ -24,6 +24,7 @@
             "name": "ts-node",
             "type": "node",
             "request": "launch",
+            "outputCapture": "std",
             "args": [
                 "${workspaceRoot}/src/main.ts"
             ],
